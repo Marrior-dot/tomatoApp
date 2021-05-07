@@ -1,6 +1,5 @@
 var Clock = document.getElementById("minsec");
 var SetTiming = document.getElementById("setter");
-var bipping = new Audio("https://www.youtube.com/watch?v=KgLg5vE8WHI&ab_channel=DownloadTube");
 
 
 function clock(){
@@ -15,15 +14,15 @@ var sec = 0;
 			setLimit = setLimit - 1;
 			sec = 60;
 		}
-		 sec = sec - 1;
-                 Clock.innerHTML =`<h1>${setLimit}:${sec}</h1>`;
-		if (sec === 0 && setLimit === 0 ){
+		sec = sec - 1;
+		if (sec === 0 && setLimit === 0)
+		 {
 			sec = 0;
 			setLimit = 0;
-			bipping.play();
+			clearInterval(Rep);
 		}
-//		sec = sec - 1;
-//		Clock.innerHTML =`<h1>${setLimit}:${sec}</h1>`;
+		//sec = sec - 1;
+		Clock.innerHTML =`<h1>${setLimit}:${sec}</h1>`;
 	}
 }
 function breakTime(){
@@ -34,10 +33,15 @@ var BRep = setInterval(minBreaks,1000)
 var bsec = 0;
 	Clock.innerHTML = `<h1>${setBreak}:0${bsec}</h1>`
 	function minBreaks(){
-		if (bsec === 0){
+		if (bsec === 0 && setBreak !== 0){
 			setBreak = setBreak - 1;
 			bsec = 60;
 		}	
+		if (bsec === 0 && setBreak !== 0){
+			bsec = 0;
+			setBreak = 0;
+			clearInterval(BRep);
+		}
 		bsec = bsec - 1;
 		Clock.innerHTML = `<h1>${setBreak}:${bsec}</h1>`;
 	}
