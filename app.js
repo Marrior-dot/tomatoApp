@@ -1,6 +1,8 @@
 var Clock = document.getElementById("minsec");
 var SetTiming = document.getElementById("setter");
 var stopButton = document.getElementById("pause");
+var stoppingSound = new Audio("https://www.soundjay.com/button/sounds/beep-30b.mp3");
+
 
 function clock(){
 setLimit = prompt("Por quantos minutos deseja estudar?");
@@ -19,6 +21,9 @@ var sec = 0;
 		 {
 			sec = 0;
 			setLimit = 0;
+			var play = setInterval(function()
+				{stoppingSound.play()}
+				,1000);
 			clearInterval(Rep);
 		}
 		Clock.innerHTML =`<h1>${setLimit}:${sec}</h1>`;
@@ -47,6 +52,9 @@ var bsec = 0;
 		}
 
 		Clock.innerHTML = `<h1>${setBreak}:${bsec}</h1>`;
+	}
+	stopButton.onclick = function(){
+		clearInterval(BRep);
 	}
 }
 /*stopButton.onclick = function StopTimer(){
