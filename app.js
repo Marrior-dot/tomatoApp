@@ -21,11 +21,10 @@ var sec = 0;
 			setLimit = 0;
 			clearInterval(Rep);
 		}
-		//sec = sec - 1;
 		Clock.innerHTML =`<h1>${setLimit}:${sec}</h1>`;
 	}
 }
-function breakTime(){
+function breakTime(Repetition){
 setBreak = prompt("Por quanto tempo deseja descansar?");
 parseInt(setBreak);
 
@@ -37,12 +36,17 @@ var bsec = 0;
 			setBreak = setBreak - 1;
 			bsec = 60;
 		}	
-		if (bsec === 0 && setBreak !== 0){
+		bsec = bsec -1;
+		if (bsec === 0 && setBreak === 0){
 			bsec = 0;
 			setBreak = 0;
 			clearInterval(BRep);
 		}
-		bsec = bsec - 1;
 		Clock.innerHTML = `<h1>${setBreak}:${bsec}</h1>`;
 	}
+	return BRep;
 }
+function StopTimer(){
+	clearInterval(BRep);
+}
+
