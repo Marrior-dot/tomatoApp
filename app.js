@@ -1,6 +1,6 @@
 var Clock = document.getElementById("minsec");
 var SetTiming = document.getElementById("setter");
-
+var stopButton = document.getElementById("pause");
 
 function clock(){
 setLimit = prompt("Por quantos minutos deseja estudar?");
@@ -9,7 +9,7 @@ parseInt(setLimit);
 var Rep = setInterval(minStudy,1000);
 var sec = 0;
 	Clock.innerHTML = `<h1>${setLimit}:0${sec}</h1>`
-	function minStudy(){ 
+	  function minStudy(){ 
 		if (sec === 0 && setLimit !== 0){
 			setLimit = setLimit - 1;
 			sec = 60;
@@ -23,8 +23,11 @@ var sec = 0;
 		}
 		Clock.innerHTML =`<h1>${setLimit}:${sec}</h1>`;
 	}
+	stopButton.onclick = function(){
+		clearInterval(Rep);
+	}
 }
-function breakTime(Repetition){
+function breakTime(){
 setBreak = prompt("Por quanto tempo deseja descansar?");
 parseInt(setBreak);
 
@@ -42,11 +45,11 @@ var bsec = 0;
 			setBreak = 0;
 			clearInterval(BRep);
 		}
+
 		Clock.innerHTML = `<h1>${setBreak}:${bsec}</h1>`;
 	}
-	return BRep;
 }
-function StopTimer(){
-	clearInterval(BRep);
+/*stopButton.onclick = function StopTimer(){
+	clearInterval(clock());
 }
-
+*/
