@@ -3,6 +3,9 @@ var SetTiming = document.getElementById("setter");
 var stopButton = document.getElementById("pause");
 var resetButton = document.getElementById("reset");
 var stoppingSound = new Audio("https://www.fesliyanstudios.com/play-mp3/4385");
+var Inst = document.getElementById("inst");
+//var InstList = document.getElementById("instList");
+
 
 
 function clock(){
@@ -64,4 +67,13 @@ var bsec = 0;
 	resetButton.onclick = function(){
 		BRep = setInterval(minBreaks,1000);
 	}
+}
+function showInst(){
+	Inst.innerHTML = "<ol class = 'instList'>";
+	Inst.innerHTML += "<li>Clique em 'Iniciar' para começar o timer de estudo</li>";
+	Inst.innerHTML += "<li>Clique em 'Estudar' para começar o timer de descanso</li>";
+	Inst.innerHTML += "<li>Para parar a contagem clique em 'Pausar'";
+	Inst.innerHTML += "<li>Para retomar a contagem clique em 'Recomeçar'</ol>";
+}
+function unshowInst(){
 }
