@@ -1,7 +1,7 @@
 var Clock = document.getElementById("minsec");
 var SetTiming = document.getElementById("setter");
 var stopButton = document.getElementById("pause");
-var stoppingSound = new Audio("https://www.soundjay.com/button/sounds/beep-30b.mp3");
+var stoppingSound = /*new Audio("https://www.soundjay.com/button/sounds/beep-30b.mp3");*/ new Audio("https://www.fesliyanstudios.com/play-mp3/4385");
 
 
 function clock(){
@@ -21,9 +21,7 @@ var sec = 0;
 		 {
 			sec = 0;
 			setLimit = 0;
-			var play = setInterval(function()
-				{stoppingSound.play()}
-				,1000);
+			stoppingSound.play()
 			clearInterval(Rep);
 		}
 		Clock.innerHTML =`<h1>${setLimit}:${sec}</h1>`;
