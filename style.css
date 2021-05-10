@@ -12,6 +12,13 @@ header{
 	font-size: 1.5em;
 	text-align: center;
 }
+#naveg{
+	text-align:center;
+	display: flex;
+	color: #54565B;
+	justify-content: space-evenly;
+	background-color: #FAF8EB;
+}
 #main{
 	margin: 0 auto;
 	margin-top:140px ;

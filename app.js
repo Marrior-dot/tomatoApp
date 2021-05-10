@@ -1,7 +1,8 @@
 var Clock = document.getElementById("minsec");
 var SetTiming = document.getElementById("setter");
 var stopButton = document.getElementById("pause");
-var stoppingSound = /*new Audio("https://www.soundjay.com/button/sounds/beep-30b.mp3");*/ new Audio("https://www.fesliyanstudios.com/play-mp3/4385");
+var resetButton = document.getElementById("reset");
+var stoppingSound = new Audio("https://www.fesliyanstudios.com/play-mp3/4385");
 
 
 function clock(){
@@ -11,6 +12,7 @@ parseInt(setLimit);
 var Rep = setInterval(minStudy,1000);
 var sec = 0;
 	Clock.innerHTML = `<h1>${setLimit}:0${sec}</h1>`
+	//Função responsável pelo cronômetro de estudo
 	  function minStudy(){ 
 		if (sec === 0 && setLimit !== 0){
 			setLimit = setLimit - 1;
@@ -26,8 +28,12 @@ var sec = 0;
 		}
 		Clock.innerHTML =`<h1>${setLimit}:${sec}</h1>`;
 	}
+	//Função do botão Pausar
 	stopButton.onclick = function(){
 		clearInterval(Rep);
+	}
+	resetButton.onclick = function(){
+		Rep = setInterval(minStudy,1000);	
 	}
 }
 function breakTime(){
@@ -46,6 +52,7 @@ var bsec = 0;
 		if (bsec === 0 && setBreak === 0){
 			bsec = 0;
 			setBreak = 0;
+			stoppingSound.play()
 			clearInterval(BRep);
 		}
 
@@ -54,8 +61,7 @@ var bsec = 0;
 	stopButton.onclick = function(){
 		clearInterval(BRep);
 	}
+	resetButton.onclick = function(){
+		BRep = setInterval(minBreaks,1000);
+	}
 }
-/*stopButton.onclick = function StopTimer(){
-	clearInterval(clock());
-}
-*/
