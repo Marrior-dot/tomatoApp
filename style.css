@@ -36,6 +36,9 @@ header{
 	margin-bottom: 3em;
 	margin: 0 auto;
 }
+#minsec{
+	background-color: white;
+}
 #instructList{
 	display: flex;
 	flex-direction: column;
@@ -54,4 +57,7 @@ i{
 }
 li{
 	margin-bottom: 0.5em;
+}
+img{
+	width: 50%;
 }

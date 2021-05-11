@@ -79,11 +79,7 @@ function unshowInst(){
 	divList.style.display = 'none'
 }
 function showContact(){
-	var links = ["https://www.instagram.com/mari0_2000/","https://api.whatsapp.com/send?phone=5591988685722&text=Ol%C3%A1!%20quero%20fazer%20meu%20or%C3%A7amento","https://github.com/Marrior-dot'><i class='fab fa-github"];
 	divCont.style.display = 'flex';
-	divCont.innerHTML = `<a  href=${links[0]} target="_blank" ><i class="fab fa-instagram"></i></a>`
-	divCont.innerHTML += `<a target ="_blank" href = ${links[1]}><i class = 'fab fa-whatsapp'></i></a>`
-	divCont.innerHTML += "<a target ='blank' href = 'https://github.com/Marrior-dot'><i class='fab fa-github'></i></a>"
 }
 function unshowContact(){
 	divCont.style.display = 'none';
