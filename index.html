@@ -11,8 +11,17 @@
 	<header>
 		<h1>PomodoroAPP</h1>
 		<nav id="naveg">
-			<h3 onmouseout="unshowInst()" onmouseover = "showInst()" id ="inst">Instruções</h3>
-			<h3 id ="contact">Contatos</h3></nav>
+			<h3 id ="inst" onmouseover="showInst()" onmouseout="unshowInst()"> Instruções
+				<div id = "instructList"></div>
+			</h3>
+
+			<h3 onmouseover="showContact()" onmouseout="unshowContact()" id ="contact">Contatos
+				<div id="contactList"></div>
+			</h3>
+			<h3 id = "About">Sobre
+				<div id="AboutList"></div>
+			</h3>
+		</nav>
 	</header>
 
 	<main id = "main">
@@ -29,6 +38,7 @@
 		</div>
 
 	</main>
+	<script src="https://kit.fontawesome.com/68c6bccf2e.js" crossorigin="anonymous"></script>
 	<script src="app.js"></script>
 </body>
 </html>

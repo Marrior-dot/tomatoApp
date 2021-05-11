@@ -3,9 +3,8 @@ var SetTiming = document.getElementById("setter");
 var stopButton = document.getElementById("pause");
 var resetButton = document.getElementById("reset");
 var stoppingSound = new Audio("https://www.fesliyanstudios.com/play-mp3/4385");
-var Inst = document.getElementById("inst");
-//var InstList = document.getElementById("instList");
-
+var divList = document.getElementById("instructList");
+var divCont = document.getElementById("contactList");
 
 
 function clock(){
@@ -69,11 +68,24 @@ var bsec = 0;
 	}
 }
 function showInst(){
-	Inst.innerHTML = "<ol class = 'instList'>";
-	Inst.innerHTML += "<li>Clique em 'Iniciar' para começar o timer de estudo</li>";
-	Inst.innerHTML += "<li>Clique em 'Estudar' para começar o timer de descanso</li>";
-	Inst.innerHTML += "<li>Para parar a contagem clique em 'Pausar'";
-	Inst.innerHTML += "<li>Para retomar a contagem clique em 'Recomeçar'</ol>";
+	divList.style.display = 'flex';
+	divList.innerHTML = "<ol>";
+	divList.innerHTML += "<li>Clique em 'Iniciar' para começar o timer de estudo</li>";
+	divList.innerHTML += "<li>Clique em 'Intervalo' para começar o timer de descanso</li>";
+	divList.innerHTML += "<li>Para parar a contagem clique em 'Pausar'</li>";
+	divList.innerHTML += "<li>Para retomar a contagem clique em 'Recomeçar'</li></ol>";
 }
 function unshowInst(){
+	divList.style.display = 'none'
 }
+function showContact(){
+	var links = ["https://www.instagram.com/mari0_2000/","https://api.whatsapp.com/send?phone=5591988685722&text=Ol%C3%A1!%20quero%20fazer%20meu%20or%C3%A7amento","https://github.com/Marrior-dot'><i class='fab fa-github"];
+	divCont.style.display = 'flex';
+	divCont.innerHTML = `<a  href=${links[0]} target="_blank" ><i class="fab fa-instagram"></i></a>`
+	divCont.innerHTML += `<a target ="_blank" href = ${links[1]}><i class = 'fab fa-whatsapp'></i></a>`
+	divCont.innerHTML += "<a target ='blank' href = 'https://github.com/Marrior-dot'><i class='fab fa-github'></i></a>"
+}
+function unshowContact(){
+	divCont.style.display = 'none';
+}
+

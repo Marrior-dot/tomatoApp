@@ -35,5 +35,23 @@ header{
 	margin: 0 auto;
 	margin-bottom: 3em;
 	margin: 0 auto;
-
+}
+#instructList{
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	justify-content: center;
+	font-size: 0.7em;
+	margin-left: 1em
+}
+#contactList{
+	display: flex;
+	justify-content: space-evenly;
+	margin-top: 0.5em;
+}
+i{
+	transform: scale(1.5);
+}
+li{
+	margin-bottom: 0.5em;
 }
