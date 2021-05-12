@@ -41,22 +41,22 @@ button{
 
 }
 #clock{
-	width: 13em;
-	height:  13em;
+	width: 16em;
+	height:  16em;
 	margin: 0 auto;
 	margin-bottom: 3em;
-	background-image: url("https://www.imagemhost.com.br/images/2021/05/12/pomodoro_art2.png");
+	background-image: url("https://www.imagemhost.com.br/images/2021/05/12/Asset-19px.png");
 	background-repeat: no-repeat;
-	background-size: auto;
+	background-size: contain;
 	transform: translateY(-30%);
 	align-content:  center;
 }
 #minsec{
 	margin:0 auto;
-	transform: translateY(60%);
+	transform: translateY(80%);
 	position: relative;
 	top: 4em;
-	right: -1.5em;
+	right: -3em;
 }
 #instructList{
 	display: flex;
