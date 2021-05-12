@@ -16,14 +16,16 @@
 			</h3>
 
 			<h3 onmouseover="showContact()" onmouseout="unshowContact()" id ="contact">Contatos
-				<div id="contactList">
+				<div id="contactList" hidden>
 					<a target = "_blank" href="https://www.instagram.com/mari0_2000/"><i class="fab fa-instagram"></i></a>
 					<a target = "_blank" href="https://api.whatsapp.com/send?phone=5591988685722&text=Ol%C3%A1!%20quero%20fazer%20meu%20or%C3%A7amento"> <i class = 'fab fa-whatsapp'></i></a>
 					<a target="_blank" href="https://github.com/Marrior-dot"> <i class='fab fa-github'></i></a>
 				</div>
 			</h3>
-			<h3 id = "About">Sobre
-				<div id="AboutList"></div>
+			<h3 onmouseover="showAbout()" onmouseout="unshowAbout()"  id = "About">Sobre
+				<div id="AboutList" hidden>
+					<p>PomodoroAPP foi feito baseado na técnica de pomodoro, com o intuito de ajudar no equilibrio entre um estudo produtivo e manter a saude mental de seus usuários, intercalando períodos de estudo e descanso</p>
+				</div>
 			</h3>
 		</nav>
 	</header>
@@ -32,8 +34,6 @@
 		<div id="clock">
 			<div id="minsec"></div>
 		</div>
-		<br>
-		
 		<div id = "buttons">
 		<button onclick = "clock()" id="setter">Iniciar</button>
 		<button id="pause">Pausar</button>

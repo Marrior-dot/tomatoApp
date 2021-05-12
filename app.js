@@ -5,6 +5,7 @@ var resetButton = document.getElementById("reset");
 var stoppingSound = new Audio("https://www.fesliyanstudios.com/play-mp3/4385");
 var divList = document.getElementById("instructList");
 var divCont = document.getElementById("contactList");
+var divAbout = document.getElementById("AboutList")
 
 
 function clock(){
@@ -84,4 +85,9 @@ function showContact(){
 function unshowContact(){
 	divCont.style.display = 'none';
 }
-
+function showAbout(){
+	divAbout.style.display = 'flex';
+}
+function unshowAbout(){
+	divAbout.style.display = 'none';
+}

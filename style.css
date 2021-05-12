@@ -12,12 +12,23 @@ header{
 	font-size: 1.5em;
 	text-align: center;
 }
+button{
+	font-family: Roboto;
+	width: 7em;
+	font-size: 1.2em;
+}
 #naveg{
 	text-align:center;
 	display: flex;
 	color: #54565B;
 	justify-content: space-evenly;
 	background-color: #FAF8EB;
+}
+#AboutList{
+	text-align: left;
+	margin: 0 auto;
+	font-size: 0.5em;
+	width: 60%;
 }
 #main{
 	margin: 0 auto;
@@ -34,10 +45,18 @@ header{
 	height:  13em;
 	margin: 0 auto;
 	margin-bottom: 3em;
-	margin: 0 auto;
+	background-image: url("https://www.imagemhost.com.br/images/2021/05/12/pomodoro_art2.png");
+	background-repeat: no-repeat;
+	background-size: auto;
+	transform: translateY(-30%);
+	align-content:  center;
 }
 #minsec{
-	background-color: white;
+	margin:0 auto;
+	transform: translateY(60%);
+	position: relative;
+	top: 4em;
+	right: -1.5em;
 }
 #instructList{
 	display: flex;
