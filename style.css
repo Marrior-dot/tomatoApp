@@ -5,7 +5,6 @@
 body{
 	margin: 0 auto;
 	padding: 0 auto;
-	border-spacing: box-size;
 }
 header{
 	color: #FAF8EB;	
@@ -15,6 +14,7 @@ header{
 button{
 	font-family: Roboto;
 	width: 7em;
+	margin-bottom: 1em;
 	font-size: 1.2em;
 }
 #naveg{
@@ -32,13 +32,12 @@ button{
 }
 #main{
 	margin: 0 auto;
-	margin-top:140px ;
-	width: 50%;
+	margin-top: 8em ;
+	width: 70%;
 	display: flex;
 	flex-direction: column;
-	justify-content:  center;
-	align-items:  center;
-
+	justify-content: center;
+	align-items: center;
 }
 #clock{
 	width: 16em;
@@ -79,4 +78,62 @@ li{
 }
 img{
 	width: 50%;
+}
+@media screen and (max-width: 480px){
+	button{
+		font-size: 0.625em
+	}
+	#buttons{
+		width: 100%;
+		display: flex;
+		justify-content:  space-between;
+	}
+	img{
+		width: 14.0625%;
+	}
+	header{
+		font-size: 20%;
+		display: flex;
+		justify-content: space-around;
+	}
+}
+@media screen and (max-width: 768px){
+	button{
+		font-size: 0.75em;
+	}
+
+	#buttons{
+		width: 100%;
+		display: flex;
+		justify-content:  space-between;
+	}
+	img{
+		width: 22.5%;
+	}
+	header{
+		font-size: 50%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+	}
+
+}
+@media screen and (max-width: 1024px){
+	button{
+		font-size: 1em;
+	}
+	#buttons{
+		width: 100%;
+		display: flex;
+		justify-content:  space-between;
+	}
+	img{
+		width: 30%;
+	}
+	header{
+		font-size: 80%;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
 }
